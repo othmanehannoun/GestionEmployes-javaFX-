@@ -5,6 +5,7 @@ package application;
 public class Employes {
 	
 	private Integer id;
+	private String typeEmp;
 	private String firstname;
 	private String lastname;
 	private int age;
@@ -15,9 +16,10 @@ public class Employes {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Employes(int id, String firstname, String lastname, int age, String dateEntrer) {
+	public Employes(int id, String typeEmp, String firstname, String lastname, int age, String dateEntrer) {
 		super();
 		this.id = id;
+		this.typeEmp = typeEmp;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
@@ -62,6 +64,14 @@ public class Employes {
 
 	public void setDateEntrer(String dateEntrer) {
 		this.dateEntrer = dateEntrer;
+	}
+
+	public String getTypeEmp() {
+		return typeEmp;
+	}
+
+	public void setTypeEmp(String typeEmp) {
+		this.typeEmp = typeEmp;
 	}
 	
 	

@@ -31,13 +31,14 @@ public class ConnDB {
 
 		int st = 0;
 		try {
-			 String sql1 = "INSERT INTO `employes`(`first-name`,`last-name`,`age`,`dateEntrer`) VALUES (?,?,?,?)";
+			 String sql1 = "INSERT INTO `employes`(`typeEmp`,`first-name`,`last-name`,`age`,`dateEntrer`) VALUES (?,?,?,?,?)";
 			 con = ConnDB.getConnection();
 			 PreparedStatement stm = (PreparedStatement)con.prepareStatement(sql1);
-			 stm.setString(1, emp.getFirstname());
-			 stm.setString(2, emp.getLastname());
-			 stm.setInt(3, emp.getAge());
-			 stm.setString(4, emp.getDateEntrer());
+			 stm.setString(1, emp.getTypeEmp());
+			 stm.setString(2, emp.getFirstname());
+			 stm.setString(3, emp.getLastname());
+			 stm.setInt(4, emp.getAge());
+			 stm.setString(5, emp.getDateEntrer());
 			 
 			 st = stm.executeUpdate();
 			 con.close();
@@ -55,14 +56,15 @@ public class ConnDB {
 		
 		try {
 			
-			String sql = "UPDATE `employes` SET `first-name`=?,`last-name`=?,`age`=?,`dateEntrer`=? WHERE `id`=? ";
+			String sql = "UPDATE `employes` SET `typeEmp`=?,`first-name`=?,`last-name`=?,`age`=?,`dateEntrer`=? WHERE `id`=? ";
 			con = ConnDB.getConnection();
 			 PreparedStatement stm = (PreparedStatement)con.prepareStatement(sql);
-			 stm.setString(1, emp.getFirstname());
-			 stm.setString(2, emp.getLastname());
-			 stm.setInt(3, emp.getAge());
-			 stm.setString(4, emp.getDateEntrer());
-			 stm.setInt(5, emp.getId());
+			 stm.setString(1, emp.getTypeEmp());
+			 stm.setString(2, emp.getFirstname());
+			 stm.setString(3, emp.getLastname());
+			 stm.setInt(4, emp.getAge());
+			 stm.setString(5, emp.getDateEntrer());
+			 stm.setInt(6, emp.getId());
 			 
 			 st = stm.executeUpdate();
 			 con.close();
@@ -107,10 +109,11 @@ public class ConnDB {
 			 
 			 if(RS.next()) {
 				 emp.setId(RS.getInt(1));
-				 emp.setFirstname(RS.getString(2));
-				 emp.setLastname(RS.getString(3));
-				 emp.setAge(RS.getInt(4));
-				 emp.setDateEntrer(RS.getString(5));
+				 emp.setTypeEmp(RS.getString(2));
+				 emp.setFirstname(RS.getString(3));
+				 emp.setLastname(RS.getString(4));
+				 emp.setAge(RS.getInt(5));
+				 emp.setDateEntrer(RS.getString(6));
 			 }
 			 	
 			 con.close();

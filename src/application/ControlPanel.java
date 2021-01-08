@@ -16,7 +16,7 @@ public class ControlPanel {
 		Stage primaryStage = new Stage();
 		Parent root = FXMLLoader.load(getClass().getResource("View-Employes.fxml"));
 		
-		Scene scene = new Scene(root,754.0,571.0);
+		Scene scene = new Scene(root,817.0,500.0);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
@@ -28,7 +28,7 @@ public class ControlPanel {
 		Stage primaryStage = new Stage();
 		Parent root = FXMLLoader.load(getClass().getResource("InsertEmploye.fxml"));
 		
-		Scene scene = new Scene(root,754.0,571.0);
+		Scene scene = new Scene(root,546.0,631.0);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
@@ -40,7 +40,7 @@ public class ControlPanel {
  		Stage primaryStage = new Stage();
  		Parent root = FXMLLoader.load(getClass().getResource("UpdateDeleteEmploye.fxml"));
  		
- 		Scene scene = new Scene(root,754.0,571.0);
+ 		Scene scene = new Scene(root,527.0,546.0);
  		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
  		
  		primaryStage.setScene(scene);

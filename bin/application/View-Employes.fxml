@@ -7,11 +7,12 @@
 
 <AnchorPane prefHeight="137.0" prefWidth="126.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewEmployes">
    <children>
-      <Pane layoutX="-13.0" layoutY="-9.0" prefHeight="571.0" prefWidth="754.0">
+      <Pane layoutX="-13.0" layoutY="-9.0" prefHeight="586.0" prefWidth="817.0">
          <children>
-            <TableView fx:id="table" layoutX="52.0" layoutY="74.0" prefHeight="227.0" prefWidth="663.0">
+            <TableView fx:id="table" layoutX="52.0" layoutY="74.0" prefHeight="227.0" prefWidth="725.0">
               <columns>
                 <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="type_Emp" prefWidth="75.0" text="Type Employé" />
                 <TableColumn fx:id="fname" prefWidth="75.0" text="First Name" />
                   <TableColumn fx:id="lname" prefWidth="75.0" text="Last Name" />
                   <TableColumn fx:id="age" prefWidth="75.0" text="Age" />

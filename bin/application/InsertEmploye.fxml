@@ -9,42 +9,49 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InsertEmploye">
    <children>
-      <Pane prefHeight="631.0" prefWidth="587.0">
+      <Pane prefHeight="653.0" prefWidth="546.0">
          <children>
-            <Label layoutX="51.0" layoutY="158.0" text="First name">
+            <Label layoutX="57.0" layoutY="228.0" text="First name">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="51.0" layoutY="224.0" text="Last name">
+            <Label layoutX="57.0" layoutY="294.0" text="Last name">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="51.0" layoutY="297.0" text="age">
+            <Label layoutX="57.0" layoutY="367.0" text="age">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="51.0" layoutY="370.0" text="Date Entrer">
+            <Label layoutX="57.0" layoutY="440.0" text="Date Entrer">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="fname1" layoutX="214.0" layoutY="155.0" prefHeight="31.0" prefWidth="221.0" />
-            <TextField fx:id="lname1" layoutX="214.0" layoutY="221.0" prefHeight="31.0" prefWidth="221.0" />
-            <TextField fx:id="age1" layoutX="214.0" layoutY="294.0" prefHeight="31.0" prefWidth="221.0" />
-            <TextField fx:id="date1" layoutX="214.0" layoutY="367.0" prefHeight="31.0" prefWidth="221.0" />
+            <TextField fx:id="typeEmp" layoutX="220.0" layoutY="155.0" prefHeight="31.0" prefWidth="221.0" />
+            <TextField fx:id="fname1" layoutX="220.0" layoutY="225.0" prefHeight="31.0" prefWidth="221.0" />
+            <TextField fx:id="lname1" layoutX="220.0" layoutY="291.0" prefHeight="31.0" prefWidth="221.0" />
+            <TextField fx:id="age1" layoutX="220.0" layoutY="364.0" prefHeight="31.0" prefWidth="221.0" />
+            <TextField fx:id="date1" layoutX="220.0" layoutY="437.0" prefHeight="31.0" prefWidth="221.0" />
             <Label layoutX="146.0" layoutY="42.0" text="Ajouter un nouvel employé" textFill="RED">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Button layoutX="214.0" layoutY="464.0" mnemonicParsing="false" onAction="#insertData" prefHeight="31.0" prefWidth="221.0" text="Ajouter">
+            <Button layoutX="220.0" layoutY="534.0" mnemonicParsing="false" onAction="#insertData" prefHeight="31.0" prefWidth="221.0" text="Ajouter">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Button>
+            <Label layoutX="57.0" layoutY="158.0" text="Type Employes">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="typeEmp" layoutX="220.0" layoutY="155.0" prefHeight="31.0" prefWidth="221.0" />
          </children>
       </Pane>
    </children>

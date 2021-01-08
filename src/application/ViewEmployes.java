@@ -23,6 +23,8 @@ public class ViewEmployes implements Initializable{
 	@FXML
 	private TableColumn<Employes, Integer> id;
 	@FXML
+	private TableColumn<Employes, String> type_Emp;
+	@FXML
 	private TableColumn<Employes, String> fname;
 	@FXML
 	private TableColumn<Employes, String> lname;
@@ -45,8 +47,8 @@ public class ViewEmployes implements Initializable{
 			 
 			 while(RS.next()) {
 				 
-				 data.add(new Employes(RS.getInt(1),RS.getString(2),
-						 RS.getString(3),RS.getInt(4),RS.getString(5)));
+				 data.add(new Employes(RS.getInt(1),RS.getString(2),RS.getString(3),
+						 RS.getString(4),RS.getInt(5),RS.getString(6)));
 				 
 			 }
 			 
@@ -56,6 +58,7 @@ public class ViewEmployes implements Initializable{
 		}
 		
 		id.setCellValueFactory(new PropertyValueFactory<Employes,Integer>("id"));
+		type_Emp.setCellValueFactory(new PropertyValueFactory<Employes,String>("typeEmp"));
 		fname.setCellValueFactory(new PropertyValueFactory<Employes,String>("firstname"));
 		lname.setCellValueFactory(new PropertyValueFactory<Employes,String>("lastname"));
 		age.setCellValueFactory(new PropertyValueFactory<Employes,Integer>("age"));

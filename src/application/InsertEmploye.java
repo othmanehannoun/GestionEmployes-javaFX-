@@ -19,6 +19,9 @@ public class InsertEmploye {
 		private TextField fname1;
 		
 		@FXML
+		private TextField typeEmp;
+		
+		@FXML
 		private TextField lname1;
 		
 		@FXML
@@ -29,7 +32,7 @@ public class InsertEmploye {
 	
 	public void insertData(ActionEvent e)throws IOException{
 		
-		
+		String typeEmploye = typeEmp.getText();
 		String firstname = fname1.getText();
 		String lastname = lname1.getText();
 		String AgeE = age1.getText();
@@ -39,6 +42,7 @@ public class InsertEmploye {
 		
 		Employes emp = new Employes();
 		
+		emp.setTypeEmp(typeEmploye);
 		emp.setFirstname(firstname);
 		emp.setLastname(lastname);
 		emp.setAge(ageEmp);

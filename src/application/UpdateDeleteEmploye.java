@@ -16,6 +16,9 @@ public class UpdateDeleteEmploye {
 	private TextField id;
 	
 	@FXML
+	private TextField UD_type;
+	
+	@FXML
 	private TextField UD_fname;
 	
 	@FXML
@@ -39,6 +42,8 @@ public class UpdateDeleteEmploye {
 		
 		
 		Employes emp = ConnDB.getEmploye(eid);
+		
+		UD_type.setText(emp.getTypeEmp());
 		UD_fname.setText(emp.getFirstname());
 		UD_lname.setText(emp.getLastname());
 		UD_age.setText(String.valueOf(emp.getAge()));
@@ -53,6 +58,7 @@ public class UpdateDeleteEmploye {
 		String Sid = id.getText();
 		int eid = Integer.parseInt(Sid);
 		
+		String textType = UD_type.getText();
 		String textfname = UD_fname.getText();
 		String textlname = UD_lname.getText();
 		int textAge = Integer.parseInt(UD_age.getText());
@@ -62,6 +68,7 @@ public class UpdateDeleteEmploye {
 		Employes emp = new Employes();
 		
 		emp.setId(eid);
+		emp.setTypeEmp(textType);
 		emp.setFirstname(textfname);
 		emp.setLastname(textlname);
 		emp.setAge(textAge);
