@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 07 jan. 2021 à 20:39
+-- Généré le : ven. 08 jan. 2021 à 12:47
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.2
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `employes` (
   `id` int(11) NOT NULL,
+  `typeEmp` varchar(200) NOT NULL,
   `first-name` varchar(200) NOT NULL,
   `last-name` varchar(200) NOT NULL,
   `age` int(11) NOT NULL,
@@ -40,11 +41,11 @@ CREATE TABLE `employes` (
 -- Déchargement des données de la table `employes`
 --
 
-INSERT INTO `employes` (`id`, `first-name`, `last-name`, `age`, `dateEntrer`) VALUES
-(1, 'Othmane', 'Hannoune', 22, '2021-01-06 \r\n'),
-(4, 'AZEERT', 'QSDFR', 33, '20002'),
-(5, 'HAMID', 'KOZAN', 45, '14/22/2002'),
-(6, 'tarik', 'mabroki', 33, '2020');
+INSERT INTO `employes` (`id`, `typeEmp`, `first-name`, `last-name`, `age`, `dateEntrer`) VALUES
+(1, 'type8', 'Othmane', 'Hannoune', 22, '2021-01-06 '),
+(4, 'type2', 'AZEERT', 'QSDFR', 33, '20002'),
+(5, 'type3', 'HAMID', 'KOZAN', 45, '14/22/2002'),
+(6, 'type4', 'tarik', 'mabroki', 33, '2020');
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `employes`
 --
 ALTER TABLE `employes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `users`
